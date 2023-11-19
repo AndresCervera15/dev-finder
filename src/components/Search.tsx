@@ -1,22 +1,24 @@
-// import { SetStateAction,  useState } from 'react';
-// import { Button } from '../Button/Button'
+import { SetStateAction, useState } from "react";
 import { Icon } from "@iconify/react";
-// import { UserCard } from '../UserCard/UserCard';
 
-export const Search = () => {
-  // const [input, setInput]=useState('')
-
+export const Search = ({ setSearch }) => {
+  const [input, setInput] = useState("");
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
+    setSearch(input);
   };
-  /* const handleOnChange = (event: { target: { value: SetStateAction<string>; }; }) => {
-  setInput(event.target.value)
-} */
+  const handleOnChange = (event: {
+    target: { value: SetStateAction<string> };
+  }) => {
+    setInput(event.target.value);
+  };
 
   return (
     <>
       <form className="form" onSubmit={handleSubmit}>
-        <div style={{ display: "flex", alignContent: "end" }}>
+        <div
+          style={{ display: "flex", alignContent: "end", minWidth: "600px" }}
+        >
           <Icon
             icon="ri:search-line"
             color="#0079ff"
@@ -24,6 +26,8 @@ export const Search = () => {
             style={{ marginRight: "8px" }}
           />
           <input
+            value={input}
+            onChange={handleOnChange}
             className="inputSearch"
             type="text"
             placeholder="Search Github username..."
@@ -31,7 +35,6 @@ export const Search = () => {
         </div>
         <button className="searchButton">Search</button>
       </form>
-      {/* <UserCard userInfo={userInfo} /> */}
     </>
   );
 };

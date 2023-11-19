@@ -1,15 +1,14 @@
 import { Icon } from "@iconify/react";
+import { UserData } from "../utils/userType";
+import { dateFormatter } from "../utils/dateFormater";
 
-export const UserCard = ({ userInfo }: any) => {
-  const dateFormatter = (ISODate: string) => {
-    const fecha = new Date(ISODate);
-    return fecha.toLocaleDateString("es-ES", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-  };
-  return (
+type userCardProps = {
+  userInfo: UserData | null;
+  isFirstInput: boolean;
+};
+
+export const UserCard = ({ userInfo, isFirstInput }: userCardProps) => {
+  return userInfo !== null ? (
     <div className="userContainer">
       <div className="topContainer">
         <div style={{ display: "flex" }}>
@@ -22,6 +21,7 @@ export const UserCard = ({ userInfo }: any) => {
             <span className="userName">{userInfo.name || "Not available"}</span>
             <a
               href={userInfo.html_url}
+              target="_blank"
               className="userLink"
             >{`@${userInfo.login}`}</a>
             <span className="bio">
@@ -92,5 +92,11 @@ export const UserCard = ({ userInfo }: any) => {
         </div>
       </div>
     </div>
+  ) : (
+    <p className="errorMessage">
+      {isFirstInput
+        ? null
+        : "It seems we couldn't find that user or not exist. 😔"}
+    </p>
   );
 };
