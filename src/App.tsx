@@ -7,7 +7,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [data, setData] = useState(null);
   const [isFirstInput, setIsFirstInput] = useState(true);
-  const [isLightMode, setIsLightMode] = useState(true);
+  const [isLightMode, setIsLightMode] = useState(false);
 
   useEffect(() => {
     const fetchData = async (search: string) => {
