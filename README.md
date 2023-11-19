@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# devFinder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+devFinder es una aplicación que te permite encontrar información sobre desarrolladores utilizando la API de GitHub. Esta aplicación está construida con Vite y React, herramientas modernas para el desarrollo de aplicaciones web.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## Expanding the ESLint configuration
+- Búsqueda de desarrolladores por nombre de usuario de GitHub.
+- Visualización de perfiles de desarrolladores con detalles importantes.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologías utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- [Vite](https://vitejs.dev/) - Herramienta de construcción rápida para aplicaciones web.
+- [React](https://reactjs.org/) - Biblioteca de JavaScript para construir interfaces de usuario.
+- [GitHub API](https://api.github.com/users/andrescervera15) - API utilizada para obtener información de desarrolladores.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Requisitos previos
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Asegúrate de tener instalado [Node.js](https://nodejs.org/) en tu máquina.
+
+## Configuración del proyecto
+
+1. Clona este repositorio: `git clone https://github.com/tu-usuario/devFinder.git`
+2. Ingresa al directorio del proyecto: `cd devFinder`
+3. Instala las dependencias: `npm install`
+
+## Uso
+
+1. Inicia la aplicación en modo de desarrollo: `npm run dev`
+2. Abre tu navegador y ve a `http://localhost:5173` o al puerto proporcionado por la consola

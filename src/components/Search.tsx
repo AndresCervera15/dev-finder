@@ -23,7 +23,7 @@ export const Search = ({ setSearch }) => {
             icon="ri:search-line"
             color="#0079ff"
             width="32"
-            style={{ marginRight: "8px" }}
+            style={{ marginRight: "16px" }}
           />
           <input
             value={input}
@@ -31,6 +31,7 @@ export const Search = ({ setSearch }) => {
             className="inputSearch"
             type="text"
             placeholder="Search Github username..."
+            required
           />
         </div>
         <button className="searchButton">Search</button>
