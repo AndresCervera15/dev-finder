@@ -148,3 +148,15 @@ form {
   color: red;
   justify-content: center;
 }
+
+.themeButton {
+  align-self: center;
+  border: none;
+  align-items: center;
+  height: 50%;
+  display: flex;
+  background-color: #141d2f;
+  color: #ffffff;
+  font-size: 16px;
+  align-items: center;
+}
