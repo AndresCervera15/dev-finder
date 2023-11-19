@@ -23,7 +23,8 @@ export const Search = ({ setSearch }) => {
             icon="ri:search-line"
             color="#0079ff"
             width="32"
-            style={{ marginRight: "16px" }}
+            style={{ marginRight: "16px", cursor: "pointer" }}
+            onClick={handleSubmit}
           />
           <input
             value={input}
@@ -34,7 +35,9 @@ export const Search = ({ setSearch }) => {
             required
           />
         </div>
-        <button className="searchButton">Search</button>
+        <button style={{ cursor: "pointer" }} className="searchButton">
+          Search
+        </button>
       </form>
     </>
   );
