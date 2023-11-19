@@ -21,7 +21,7 @@ Asegúrate de tener instalado [Node.js](https://nodejs.org/) en tu máquina.
 
 ## Configuración del proyecto
 
-1. Clona este repositorio: `git clone https://github.com/tu-usuario/devFinder.git`
+1. Clona este repositorio: `git clone https://github.com/AndresCervera15/dev-finder.git`
 2. Ingresa al directorio del proyecto: `cd devFinder`
 3. Instala las dependencias: `npm install`
 
