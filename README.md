@@ -3,6 +3,7 @@
 ## Descripción
 
 devFinder es una aplicación que te permite encontrar información sobre desarrolladores utilizando la API de GitHub. Esta aplicación está construida con Vite y React, herramientas modernas para el desarrollo de aplicaciones web.
+Para visitarla haz [click aqui](https://655abd2a040c862787340bb3--extraordinary-raindrop-556d9e.netlify.app/)
 
 ## Características
 
